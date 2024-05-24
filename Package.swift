@@ -10,6 +10,7 @@ let package = Package(
     ],
     products: [
         .library(name: "LocationManager", targets: ["LocationManager"]),
+        .library(name: "LocationManager2", targets: ["LocationManager2"]),
     ],
     dependencies: [],
     targets: [
@@ -21,6 +22,15 @@ let package = Package(
             name: "LocationManagerTests",
             dependencies: ["LocationManager"],
             path: "LocationManager/Tests/LocationManagerTests"
+        ),
+        .target(
+            name: "LocationManager2",
+            path: "LocationManager2/Sources/LocationManager2"
+        ),
+        .testTarget(
+            name: "LocationManagerTests2",
+            dependencies: ["LocationManager2"],
+            path: "LocationManager2/Tests/LocationManagerTests2"
         ),
     ]
 )
